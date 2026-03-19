@@ -1,0 +1,142 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center; /*置中*/
+  background-color: #1a1a2e; /*背景顏色*/
+  color: #e9e9eb; /*文字顏色*/
+  padding: 20px;
+}
+
+/* 牌陣容器*/
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /*空間不夠時自動換行 */
+  gap: 20px;
+  margin: 30px 0;
+  perspective: 1000px;
+}
+
+/* 單張塔羅牌 */
+.tarot-card {
+  width: 150px;   /*從 100px改成150px*/
+  height: 240px;  /*從 160px改成240px*/
+  background-color: #4a4e69;
+  border: 2px solid #9a8c98; 
+  border-radius: 10px; 
+  font-size: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; 
+  transition: transform 0.3s; 
+  transform-style: preserve-3d;
+}
+
+.tarot-card:hover { /*當滑鼠懸停在卡牌上的效果*/
+  transform: translateY(-10px) scale(1.05); /*牌往上浮動*/
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3); /*發光效果*/
+}
+
+/* 被選中翻轉時的狀態 */
+.tarot-card.flipped {
+  transform: rotateY(180deg); /*翻轉180度*/
+}
+
+/* 卡片正面與反面的通用樣式:重疊在一起 */
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  position: absolute; /*重疊*/
+  backface-visibility: hidden; /*翻到背面隱藏第一面*/
+  top: 0;
+  left: 0;
+  overflow: hidden; /*防止圖片超出*/
+}
+
+/* 圖片通用樣式 */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*讓圖片填滿且不變形*/
+}
+
+/* 正面 */
+.card-front {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+/* 正面圖片的樣式（用來處理逆位） */
+.card-front img {
+  transition: transform 0.5s; /* 逆位旋轉動畫 */
+}
+
+/* 逆位時，圖片旋轉180度 */
+.card-front.reversed img {
+  transform: rotate(180deg);
+}
+
+/* 卡背*/
+.card-back {
+  background-color: #4a4e69;
+}
+
+textarea { /*讓文字框好看一點*/
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+/*按鈕區塊*/
+.action-buttons {
+	margin-top:15px;
+	display: flex;
+	justify-content: center;
+	gap: 15opx;
+}
+
+.action-btn {
+	padding: 10px 20px;
+	font-size:16px;
+	font-family: inherit;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: translate 0.3s easse;
+	text-decoration: none;/*去除a標籤預設的底線*/
+	display: inline-block;
+	font-weight: bold;
+}
+
+/*複製按鈕樣式*/
+#copyBtn {
+	background-color: #9a8c98;
+	color: 1a1a2e;
+}
+
+#copyBtn:hover {
+	background-color: #c9bbc8;
+	transform: translateY(-2px);/*稍微飄起*/
+}
+
+/*gemini按鈕樣式*/
+.gemini-btn {
+	background-color: #4a4e69;
+	color:#e9e9eb;
+	border: 1px solid #9a8c98;
+}
+
+.gemini-btn:hover {
+	background-color: #6a6e8f;
+	transform: translateY(-2px);S
+	box-shadow: 0px 4px 10px rgba(225, 225, 225, 0.2);
+}

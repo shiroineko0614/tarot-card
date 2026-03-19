@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" href="styles.css">
+    <title>塔羅牌占卜系統</title>
+  </head>
+  <body>
+      <h1 class="title">🔮塔羅牌占卜🔮</h1>
+      <div>
+        <label for = "question">你想問什麼？</label>
+        <input type = "text" id = "question" placeholder = "例如：今日運勢">
+      </div>
+	  <p>抽一張你第一眼就看中的牌</p>
+<div id="cardSpread" class="cards-container">
+  <div class="tarot-card">
+    <div class="card-front"> [placeholder for image and name] </div>
+    <div class="card-back"> <img src="back.png" alt="卡背"> </div>
+  </div>
+  <div class="tarot-card">
+    <div class="card-front"> [placeholder for image and name] </div>
+    <div class="card-back"> <img src="back.png" alt="卡背"> </div>
+  </div>
+  <div class="tarot-card">
+    <div class="card-front"> [placeholder for image and name] </div>
+    <div class="card-back"> <img src="back.png" alt="卡背"> </div>
+  </div>
+  <div class="tarot-card">
+    <div class="card-front"> [placeholder for image and name] </div>
+    <div class="card-back"> <img src="back.png" alt="卡背"> </div>
+  </div>
+  <div class="tarot-card">
+    <div class="card-front"> [placeholder for image and name] </div>
+    <div class="card-back"> <img src="back.png" alt="卡背"> </div>
+  </div>
+</div>
+      <div id = "result">
+        <h2 id = "cardName">牌名會顯示在這裡</h2>
+        <p id = "hashtags">#標籤一 #標籤二 #標籤三</p>
+        <p>👇複製以下指令找Gemini解牌：</p>
+        <textarea id = "AIPrompt" rows = "4" cols = "50" readonly></textarea>
+		<div class="action-buttons">
+		<button id="copyBtn" class="action-btn">一鍵複製指令</button>
+		<a href="https://gemini.google.com/" target="_blank" class="action-btn gemini-btn">☆ 前往找Gemini解牌</a>
+      </div>
+	  </div>
+	  <p>圖片皆由Gemini生成，網頁為白夜貓所創作</p>
+      <script src="script.js"></script>
+  </body>
+</html>
