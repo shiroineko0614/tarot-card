@@ -29,6 +29,8 @@ const cardNameDisplay = document.getElementById("cardName")
 const hashtagsDisplay = document.getElementById("hashtags")
 const questionInput = document.getElementById("question")
 const aiPromptDisplay = document.getElementById("AIPrompt")
+const resetBtn=document.getElementById("resetBtn")
+let hasDrawn=false;
 
 //抓取畫面上的所有塔羅牌
 const allCards = document.querySelectorAll(".tarot-card")
@@ -36,6 +38,10 @@ const allCards = document.querySelectorAll(".tarot-card")
 //幫每張牌都加上點擊功能
 allCards.forEach(function(card){
 	card.addEventListener("click", function(){
+	
+	if(hasDrawn===true){
+		return;
+	}
 	
 	//1.檢查使用者是否輸入問題，若沒有，則提醒她
 	const userQuestion=questionInput.value;
@@ -48,6 +54,9 @@ allCards.forEach(function(card){
     if(card.classList.contains('flipped')){
 		return;
 	}
+	
+	//上鎖
+	hasDrawn=true;
 	
 	//加上.flipped觸發css動畫
 	setTimeout(function(){
@@ -116,4 +125,23 @@ copyBtn.addEventListener("click", function(){
 	});
 	
 })
-	
+
+resetBtn.addEventListener("click", function(){
+	hasDrawn=false;
+	questionInput.value="";
+	cardNameDisplay.innerText="牌名會顯示在這裡"
+	hashtagsDisplay.innerText="#標籤一 #標籤二 #標籤三"
+	aiPromptDisplay.value=""
+	allCards.forEach(function(card){
+		
+		//移除翻轉動畫
+		card.classList.remove("flipped");
+		
+		setTimeout(function(){
+			const cardFront=card.querySelector(".card-front");
+			cardFront.innerHTML="[placeholder for image and name]";
+			cardFront.classList.remove("reversed")
+		}, 300);
+	});
+});
+		

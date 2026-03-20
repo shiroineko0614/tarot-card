@@ -140,3 +140,25 @@ textarea { /*讓文字框好看一點*/
 	transform: translateY(-2px);S
 	box-shadow: 0px 4px 10px rgba(225, 225, 225, 0.2);
 }
+
+.reset-btn {
+	background-color: #b5838d;
+	color:#1a1a2e;
+}
+
+.rest-btn:hover {
+	background-color:#e5989b;
+	transform:translateY(-2px);
+}
+
+.deepseek-btn {
+	background-color: #4a4e69;
+	color:#e9e9eb;
+	border: 1px solid #9a8c98;
+}
+
+.deepseek-btn:hover {
+	background-color: #6a6e8f;
+	transform: translateY(-2px);
+	box-shadow: 0px 4px 10px rgba(225, 225, 225, 0.2);
+}
