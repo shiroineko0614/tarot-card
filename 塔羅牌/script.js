@@ -1,27 +1,27 @@
-// 🔮 塔羅牌資料庫：22 張大阿爾克那 (Major Arcana)
+// 🔮 塔羅牌資料庫 2.0：加入正逆位獨立標籤
 const tarotDeck = [
-  {name: "愚者 (The Fool)", image: "fool.png", hashtags: "#新開始 #冒險 #純真"},
-  {name: "魔術師 (The Magician)", image: "magician.png", hashtags: "#創造力 #行動 #自信"},
-  {name: "女祭司 (The High Priestess)", image: "high_priestess.png", hashtags: "#直覺 #神祕 #潛意識"},
-  {name: "皇后 (The Empress)", image: "empress.png", hashtags: "#豐收 #孕育 #母性"},
-  {name: "皇帝 (The Emperor)", image: "emperor.png", hashtags: "#權威 #秩序 #控制"},
-  {name: "教皇 (The Hierophant)", image: "hierophant.png", hashtags: "#傳統 #信仰 #教育"},
-  {name: "戀人 (The Lovers)", image: "lovers.png", hashtags: "#選擇 #愛情 #結合"},
-  {name: "戰車 (The Chariot)", image: "chariot.png", hashtags: "#意志 #勝利 #行動"},
-  {name: "力量 (Strength)", image: "strength.png", hashtags: "#勇氣 #耐心 #柔克剛"},
-  {name: "隱者 (The Hermit)", image: "hermit.png", hashtags: "#內省 #孤獨 #指引"},
-  {name: "命運之輪 (Wheel of Fortune)", image: "wheel.png", hashtags: "#轉變 #契機 #幸運"},
-  {name: "正義 (Justice)", image: "justice.png", hashtags: "#公平 #平衡 #因果"},
-  {name: "倒吊人 (The Hanged Man)", image: "hanged_man.png", hashtags: "#犧牲 #換位思考 #等待"},
-  {name: "死神 (Death)", image: "death.png", hashtags: "#結束 #重生 #轉型"},
-  {name: "節制 (Temperance)", image: "temperance.png", hashtags: "#調和 #中庸 #淨化"},
-  {name: "惡魔 (The Devil)", image: "devil.png", hashtags: "#誘惑 #束縛 #物質"},
-  {name: "高塔 (The Tower)", image: "tower.png", hashtags: "#毀滅 #突變 #解放"},
-  {name: "星星 (The Star)", image: "star.png", hashtags: "#希望 #平靜 #靈感"},
-  {name: "月亮 (The Moon)", image: "moon.png", hashtags: "#不安 #迷惘 #潛意識"},
-  {name: "太陽 (The Sun)", image: "sun.png", hashtags: "#成功 #活力 #喜悅"},
-  {name: "審判 (Judgement)", image: "judgement.png", hashtags: "#覺醒 #反省 #重生"},
-  {name: "世界 (The World)", image: "world.png", hashtags: "#圓滿 #達成 #完整"}
+  {name: "愚者 (The Fool)", image: "fool.png", upright: "#新開始 #冒險 #純真", reversed: "#魯莽 #過度冒險 #不負責任"},
+  {name: "魔術師 (The Magician)", image: "magician.png", upright: "#創造力 #行動 #自信", reversed: "#缺乏動力 #騙局 #才華未展"},
+  {name: "女祭司 (The High Priestess)", image: "high_priestess.png", upright: "#直覺 #神祕 #潛意識", reversed: "#隱瞞 #忽視直覺 #表面"},
+  {name: "皇后 (The Empress)", image: "empress.png", upright: "#豐收 #孕育 #母性", reversed: "#依賴 #過度保護 #缺乏成長"},
+  {name: "皇帝 (The Emperor)", image: "emperor.png", upright: "#權威 #秩序 #控制", reversed: "#固執 #暴君 #缺乏紀律"},
+  {name: "教皇 (The Hierophant)", image: "hierophant.png", upright: "#傳統 #信仰 #教育", reversed: "#打破常規 #盲從 #挑戰權威"},
+  {name: "戀人 (The Lovers)", image: "lovers.png", upright: "#選擇 #愛情 #結合", reversed: "#分離 #失和 #錯誤的選擇"},
+  {name: "戰車 (The Chariot)", image: "chariot.png", upright: "#意志 #勝利 #行動", reversed: "#失控 #阻礙 #缺乏方向"},
+  {name: "力量 (Strength)", image: "strength.png", upright: "#勇氣 #耐心 #柔克剛", reversed: "#軟弱 #自我懷疑 #失控"},
+  {name: "隱者 (The Hermit)", image: "hermit.png", upright: "#內省 #孤獨 #指引", reversed: "#孤立 #逃避 #拒絕溝通"},
+  {name: "命運之輪 (Wheel of Fortune)", image: "wheel.png", upright: "#轉變 #契機 #幸運", reversed: "#厄運 #阻礙 #無力感"},
+  {name: "正義 (Justice)", image: "justice.png", upright: "#公平 #平衡 #因果", reversed: "#不公 #偏見 #逃避責任"},
+  {name: "倒吊人 (The Hanged Man)", image: "hanged_man.png", upright: "#犧牲 #換位思考 #等待", reversed: "#無謂的犧牲 #拖延 #鑽牛角尖"},
+  {name: "死神 (Death)", image: "death.png", upright: "#結束 #重生 #轉型", reversed: "#恐懼改變 #停滯 #拒絕放手"},
+  {name: "節制 (Temperance)", image: "temperance.png", upright: "#調和 #中庸 #淨化", reversed: "#失衡 #極端 #缺乏耐心"},
+  {name: "惡魔 (The Devil)", image: "devil.png", upright: "#誘惑 #束縛 #物質", reversed: "#解脫 #覺醒 #擺脫控制"},
+  {name: "高塔 (The Tower)", image: "tower.png", upright: "#毀滅 #突變 #解放", reversed: "#逃避災難 #害怕改變 #重建困難"},
+  {name: "星星 (The Star)", image: "star.png", upright: "#希望 #平靜 #靈感", reversed: "#絕望 #悲觀 #缺乏靈感"},
+  {name: "月亮 (The Moon)", image: "moon.png", upright: "#不安 #迷惘 #潛意識", reversed: "#揭露真相 #解除誤會 #克服恐懼"},
+  {name: "太陽 (The Sun)", image: "sun.png", upright: "#成功 #活力 #喜悅", reversed: "#暫時的挫折 #過度自信 #缺乏熱情"},
+  {name: "審判 (Judgement)", image: "judgement.png", upright: "#覺醒 #反省 #重生", reversed: "#自我懷疑 #拒絕改變 #無法釋懷"},
+  {name: "世界 (The World)", image: "world.png", upright: "#圓滿 #達成 #完整", reversed: "#未完成 #停滯 #缺乏成就感"}
 ];
 
 //讓JS認識Html元素
@@ -40,6 +40,11 @@ allCards.forEach(function(card){
 	card.addEventListener("click", function(){
 	
 	if(hasDrawn===true){
+		const wantToReset=confirm("你已經抽過牌囉！要重新洗牌再抽一次嗎？")
+	
+		if(wantToReset){
+			resetBtn.click();
+		}
 		return;
 	}
 	
@@ -73,6 +78,9 @@ allCards.forEach(function(card){
 	const isUpright = Math.random() < 0.5;
 	const position = isUpright? "正位" : "逆位"
 	
+	//根據正逆位，抓取對應的hashtag
+	const currentHashtags=isUpright? drawnCard.upright:drawnCard.reversed;
+	
 	//更新卡片正面圖片和內容
 	const cardFront=card.querySelector(".card-front");
 	
@@ -90,12 +98,10 @@ allCards.forEach(function(card){
 		
 	//3.更新畫面上的牌名和標籤 (把正逆位也加進去顯示)
 	cardNameDisplay.innerText = "你抽到了: " + drawnCard.name + " (" + position + ")";
-	hashtagsDisplay.innerText = "正位: "+drawnCard.hashtags;
+	hashtagsDisplay.innerText = position+"代表: "+currentHashtags;
 	
 	//4.組合要給AI的指令
-	const promptText = "我剛剛進行了塔羅牌占卜。我的問題是「" + userQuestion + "」。我抽到的牌是「" + drawnCard.name + "」的【" + position + "】。這張牌的正位代表涵義有 " + drawnCard.hashtags + "。請根據這張牌的【" + position + "】含義，幫我詳細解答我的問題，並給我一些具體的建議！";
-	//把組合好的文字放進文字框裡
-	aiPromptDisplay.value = promptText;
+	const promptText = "我剛剛進行了塔羅牌占卜。我的問題是「" + userQuestion + "」。我抽到的牌是「" + drawnCard.name + "」的【" + position + "】。這張牌的" + position + "代表涵義有 " + currentHashtags + "。請根據這張牌的【" + position + "】含義，幫我詳細解答我的問題，並給我一些具體的建議！";	//把組合好的文字放進文字框裡
 	aiPromptDisplay.value = promptText;
 	});
 });
@@ -141,7 +147,7 @@ resetBtn.addEventListener("click", function(){
 			const cardFront=card.querySelector(".card-front");
 			cardFront.innerHTML="[placeholder for image and name]";
 			cardFront.classList.remove("reversed")
-		}, 300);
+		}, 2000);
 	});
 });
 		

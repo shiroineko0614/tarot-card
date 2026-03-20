@@ -7,46 +7,42 @@
   <body>
       <h1 class="title">🔮塔羅牌占卜🔮</h1>
       <div>
-        <label for = "question">你想問什麼？</label>
-        <input type = "text" id = "question" placeholder = "例如：今日運勢">
+        <label for = "question"></label>
+        <input type = "text" id = "question" placeholder = "在心中默念疑問，並在此輸入...">
       </div>
-	  <p>抽一張你第一眼就看中的牌</p>
+	  <p>抽一張第一眼就看中的牌</p>
 <div id="cardSpread" class="cards-container">
-  <div class="tarot-card">
-    <div class="card-front"> [placeholder for image and name] </div>
-    <div class="card-back"> <img src="back.png" alt="卡背"> </div>
-  </div>
-  <div class="tarot-card">
-    <div class="card-front"> [placeholder for image and name] </div>
-    <div class="card-back"> <img src="back.png" alt="卡背"> </div>
-  </div>
-  <div class="tarot-card">
-    <div class="card-front"> [placeholder for image and name] </div>
-    <div class="card-back"> <img src="back.png" alt="卡背"> </div>
-  </div>
-  <div class="tarot-card">
-    <div class="card-front"> [placeholder for image and name] </div>
-    <div class="card-back"> <img src="back.png" alt="卡背"> </div>
-  </div>
-  <div class="tarot-card">
-    <div class="card-front"> [placeholder for image and name] </div>
-    <div class="card-back"> <img src="back.png" alt="卡背"> </div>
-  </div>
-</div>
+        <div class="tarot-card">
+          <div class="card-front"> [placeholder for image and name] </div>
+          <div class="card-back"> <img src="back.png" alt="卡背"> </div>
+        </div>
+        <div class="tarot-card">
+          <div class="card-front"> [placeholder for image and name] </div>
+          <div class="card-back"> <img src="back.png" alt="卡背"> </div>
+        </div>
+        <div class="tarot-card">
+          <div class="card-front"> [placeholder for image and name] </div>
+          <div class="card-back"> <img src="back.png" alt="卡背"> </div>
+        </div>
+        <div class="tarot-card">
+          <div class="card-front"> [placeholder for image and name] </div>
+          <div class="card-back"> <img src="back.png" alt="卡背"> </div>
+        </div>
+      </div>
       <div id = "result">
-        <h2 id = "cardName">牌名會顯示在這裡</h2>
-        <p id = "hashtags">#標籤一 #標籤二 #標籤三</p>
+        <h2 id = "cardName">指引將在此顯現</h2>
+        <p id = "hashtags"></p>
         <p>👇複製以下指令找AI解牌：</p>
-        <textarea id = "AIPrompt" rows = "4" cols = "50" readonly></textarea>
+        <textarea id = "AIPrompt" readonly placeholder="AI占卜指令會自動在這裡生成..."></textarea>
 		<div class="action-buttons">
-		<button id = "resetBtn" class="action-btn reset-btn">重製</button>
-		<button id="copyBtn" class="action-btn">一鍵複製指令</button>
-		<a href="https://gemini.google.com/" target="_blank" class="action-btn gemini-btn">☆ 找Gemini解牌</a>
-		<a href="https://chat.deepseek.com/" target="_blank" class="action-btn deepseek-btn">🐳 找Deepseek解牌</a>
+		<button id = "resetBtn" class="action-btn reset-btn">🔄 重置</button>
+		<button id="copyBtn" class="action-btn">📋 複製指令</button>
+		<a href="https://gemini.google.com/" target="_blank" class="action-btn gemini-btn">✨ Gemini解牌</a>
+		<a href="https://chat.deepseek.com/" target="_blank" class="action-btn deepseek-btn">🐳 Deepseek解牌</a>
       </div>
 	  </div>
 	  <p>圖片皆由Gemini生成，網頁為白夜貓所創作</p>
-	  <p>V1.1</p>
+	  <p>V1.2</p>
       <script src="script.js"></script>
   </body>
 </html>
