@@ -1,4 +1,4 @@
-// 🔮 塔羅牌資料庫 2.0：加入正逆位獨立標籤
+//塔羅牌資料庫
 const tarotDeck = [
   {name: "愚者 (The Fool)", image: "fool.png", upright: "#新開始 #冒險 #純真", reversed: "#魯莽 #過度冒險 #不負責任"},
   {name: "魔術師 (The Magician)", image: "magician.png", upright: "#創造力 #行動 #自信", reversed: "#缺乏動力 #騙局 #才華未展"},
@@ -48,7 +48,7 @@ allCards.forEach(function(card){
 		return;
 	}
 	
-	//1.檢查使用者是否輸入問題，若沒有，則提醒她
+	//檢查使用者是否輸入問題，若沒有，則提醒她
 	const userQuestion=questionInput.value;
 	if(userQuestion===""){
 	alert("請輸入你想問的問題喔！");
@@ -69,13 +69,12 @@ allCards.forEach(function(card){
 	}, 50)
 	
 	//在動畫進行到一半才更新資料，增加真實感
-	
-	//2.產生隨機編碼並把牌取出
+	//產生隨機編碼並把牌取出
 	const randomIndex = Math.floor(Math.random() * tarotDeck.length)
 	const drawnCard = tarotDeck[randomIndex];
 	
 	//正逆位邏輯
-	const isUpright = Math.random() < 0.5;
+	const isUpright = Math.random() < 0.5; //0~0.999...
 	const position = isUpright? "正位" : "逆位"
 	
 	//根據正逆位，抓取對應的hashtag
@@ -91,9 +90,9 @@ allCards.forEach(function(card){
         cardFront.innerHTML = '<img src="' + imageSrc + '" alt="' + drawnCard.name + '">';
         
         if (!isUpright) {
-            cardFront.classList.add('reversed'); // 如果是逆位，加上旋轉圖片的 class
+            cardFront.classList.add('reversed');//如果是逆位，加上旋轉圖片的class
         } else {
-            cardFront.classList.remove('reversed'); // 如果是正位，確保圖片沒有被旋轉
+            cardFront.classList.remove('reversed');//如果是正位，確保圖片沒有被旋轉
         }
 		
 	//3.更新畫面上的牌名和標籤 (把正逆位也加進去顯示)
